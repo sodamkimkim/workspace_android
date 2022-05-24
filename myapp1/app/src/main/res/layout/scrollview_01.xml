@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!--
+    자바 같은 경우 문법 오류를 잘 잡아준다.
+    xml언어의 특징은 문법체크가 느슨하다.
+    => 코드 잘못 쓰더라도 바로 확인 못하는 경우가 많다.
+    실행시키면서 어떤게 잘못되었는지 체크해야한다.
+    -->
+    <!--    Scrollview는 뭘 안에 넣을 거니까 셀프클로징 잘 안씀
+    한 화면에 모든 내용 다 못보여 줄때 scrollview쓴다.
+     모바일 화면은 작기 때문에 scrollview많이 쓴다.
+
+     ** Scrollview사용 시 주의할 점
+     - Scrollview는 오직 하나의 자식 뷰를 가질 수 있다.
+     ㄴ 부모의 orientation vertical  하던지, horizontal하던지 둘중하나해야하고 -> is scroll생성 방향
+     자식이 여러명이면 진행방향 어떻게 해야할지 꼬이기 때문에 자식 하나만 가질 수 있는거임
+     - 스크롤 뷰 사용할 때는 무조건 fillViewport 속성 true사용하기
+     ㄴ Scrollview도 사실 클래스임(control + 클릭해서 들어갈 수 있음)
+     ㄴ 특정 동작에 따라서 스크롤 동작 안할 수 있음을 방지해줌.(알 수 없는 버그방지)
+     -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="700dp"
+        android:fillViewport="true"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:background="@color/myColorOrange" />
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="300dp"
+                android:background="@color/teal_200" />
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="300dp"
+                android:background="@color/purple_200" />
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

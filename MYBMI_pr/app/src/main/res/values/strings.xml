@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">MYBMI_pr</string>
+    <string name="str_bmi">BMI계산기</string>
+</resources>

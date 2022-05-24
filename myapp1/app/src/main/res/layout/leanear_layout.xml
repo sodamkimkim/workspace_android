@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!--
+match_parent : 부모 화면(크기에 꽉 채워라)
+-->
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="text1" />
+
+    <!--wrap_comtent : content크기 만큼 크기를 가져라-->
+    <TextView
+        android:layout_width="wrap_content"
+
+        android:layout_height="20dp"
+        android:text="안녕하세요. 처음으로 작성하는 텍스트 뷰 입니다."
+        android:textColor="@color/purple_200"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="text3" />
+</LinearLayout>
