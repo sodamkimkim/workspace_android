@@ -53,8 +53,8 @@ public class MainActivity extends AppCompatActivity {
     RecyclerView recyclerView = findViewById(R.id.recyclerView);
     recyclerView.setAdapter(foodAdapter);
     recyclerView.setLayoutManager(new LinearLayoutManager(this));
-
-//        recyclerView.setLayoutManager(new GridLayoutManager(this,2));
+        recyclerView.hasFixedSize();// 성능개선을 위한 코드.
+    // recyclerView.setLayoutManager(new GridLayoutManager(this,2));
     // 2. LayoutManager를 생성해서 Adapter클래스와 연결해야 한다.
     }
 }

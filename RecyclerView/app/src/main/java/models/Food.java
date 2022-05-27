@@ -2,14 +2,14 @@ package models;
 
 import java.io.Serializable;
 import java.util.ArrayList;
-
+// 직렬화 : object화..-> byte
+// 역직렬화 : byte -> object
 public class Food implements Serializable {
     private String thumbnail;
     private String title;
     private String subTitle;
     private String detail;
-
-//    alt + insert => 생성자 만들기, shift눌러서 화살표 내리면 다 선택 가능
+        // alt + insert => 생성자 만들기, shift눌러서 화살표 내리면 다 선택 가능
     public Food(String thumbnail, String title, String subTitle, String detail) {
         this.thumbnail = thumbnail;
         this.title = title;
@@ -43,6 +43,16 @@ public class Food implements Serializable {
 
     public String getDetail() {
         return detail;
+    }
+
+    @Override
+    public String toString() {
+        return "Food{" +
+                "thumbnail='" + thumbnail + '\'' +
+                ", title='" + title + '\'' +
+                ", subTitle='" + subTitle + '\'' +
+                ", detail='" + detail + '\'' +
+                '}';
     }
 
     public void setDetail(String detail) {
