@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         FoodAdapter foodAdapter = new FoodAdapter(Food.getSampleData(), this, new OnFoodItemClickListener() {
             @Override
-            public void onItemClilcked(View view, int position) {
+            public void onItemClicked(View view, int position) {
                 Log.d("TAG","넘겨받은 position : " + position);
                 Intent intent = new Intent(getApplication(), DetailActivity.class);
                 // 원래 intent는 object로 주고받지 못함.

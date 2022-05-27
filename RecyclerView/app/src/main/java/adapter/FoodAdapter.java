@@ -94,7 +94,7 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.MyViewHolder> 
             itemView.setOnClickListener(view -> {
                 Toast.makeText(view.getContext(),"TEST"+getLayoutPosition(),Toast.LENGTH_SHORT).show();
                 //콜백 메서드 호출
-                onFoodItemClickListener.onItemClilcked(itemView, getLayoutPosition());
+                onFoodItemClickListener.onItemClicked(itemView, getLayoutPosition());
             });
         }
     } // end of inner-class
