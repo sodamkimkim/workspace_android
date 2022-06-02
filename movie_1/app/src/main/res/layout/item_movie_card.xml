@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?><!--itemView만들때 항상 height wrap-content-->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+    <!--    튀어나오는 카드뷰 쓸 때 relative써서 이녀석 기준으로 배치 해준다.-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="@color/danger"
+            app:cardCornerRadius="10dp">
+            <!--            cardview도 단 하나의 자식만 가지는게 좋다.-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <!--            눈에 보이지 않는 가이드라인.. 이미지와 텍스트 양 끝라인을 맞추기 위해서 가이드라인 설정-->
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guidline1"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_begin="135dp" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guidline2"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_end="15dp" />
+                <!--ellipsize => 글자길면 ... 처리-->
+                <TextView
+                    android:id="@+id/titleTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:gravity="end|bottom"
+                    app:layout_constraintStart_toEndOf="@id/guidline1"
+                   tools:text="벤자민 버튼의 시간은 거꾸로 건다dddddddddd."
+                    app:layout_constraintBottom_toTopOf="@id/ratingTextView"
+                    android:textColor="@color/black"
+                    app:layout_constraintEnd_toEndOf="@id/guidline2"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/ratingTextView"
+                    app:layout_constraintBottom_toTopOf="@id/ratingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="9.9"
+                    app:layout_constraintVertical_chainStyle="packed"
+                    app:layout_constraintEnd_toEndOf="@id/guidline2"
+                    app:layout_constraintTop_toBottomOf="@+id/titleTextView" />
+
+                <RatingBar
+                    app:layout_constraintTop_toBottomOf="@id/ratingTextView"
+                    android:id="@+id/ratingBar"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:numStars="10"
+                    android:rating="1"
+                    android:stepSize="1"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@id/guidline2" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+    </RelativeLayout>
+        <ImageView
+            android:id="@+id/posterImageView"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="10dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/round_image" />
+</FrameLayout>
