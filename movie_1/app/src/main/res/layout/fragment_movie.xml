@@ -3,8 +3,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_gravity="center"
     tools:context=".MovieFragment">
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/progressIndicator"
+        android:indeterminate="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:orientation="vertical"

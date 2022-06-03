@@ -1,5 +1,6 @@
 package com.example.movie_1.adapter;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +15,7 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.bitmap.FitCenter;
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
 import com.example.movie_1.R;
+import com.example.movie_1.interfaces.OnMovieItemClicked;
 import com.example.movie_1.models.Movie;
 
 import java.util.ArrayList;
@@ -23,12 +25,27 @@ import java.util.List;
 public class MovieAdpater extends RecyclerView.Adapter<MovieAdpater.MyViewHolder> {
 
     private List<Movie> list = new ArrayList<>();
+    OnMovieItemClicked onMovieItemClicked;
+
+    public void setOnMovieItemClicked(OnMovieItemClicked onMovieItemClicked) {
+        this.onMovieItemClicked = onMovieItemClicked;
+    }
+
 
     //통신 배우기 전에는 생성자에서 데이터를 전달 받아서 화면을 구성했음
     // 지금은 네트워크 통신이기 때문에 화면을 그리는 시점보다 더 늦게 데이터가 도달할 수 있다.
-    public void addItemList(List<Movie> list) {
+    public void initItemList(List<Movie> list) {
         this.list = list;
         notifyDataSetChanged();// 화면 다시그려줌
+    }
+
+    public void addItem(List<Movie> addList) {
+        // 한번도 통신 x => list.size()=0
+        //10
+        //20
+        //,,
+        this.list.addAll(list.size(), addList);
+        notifyDataSetChanged();
     }
 
     @NonNull
@@ -43,6 +60,9 @@ public class MovieAdpater extends RecyclerView.Adapter<MovieAdpater.MyViewHolder
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         Movie movie = list.get(position);
         holder.setItem(movie);
+        holder.itemView.setOnClickListener(view -> {
+            onMovieItemClicked.selectedItem(movie);
+        });
     }
 
     @Override
@@ -83,6 +103,9 @@ public class MovieAdpater extends RecyclerView.Adapter<MovieAdpater.MyViewHolder
                     .placeholder(R.drawable.round_image)
                     .transform(new FitCenter(), new RoundedCorners(20))
                     .into(posterImageView);
+            itemView.setOnClickListener(view -> {
+                Log.d("TAG", "" + view.getContext());
+            });
         }
-    }
-} // end of inner-class
+    } // end of inner-class
+} // end of outer-class
