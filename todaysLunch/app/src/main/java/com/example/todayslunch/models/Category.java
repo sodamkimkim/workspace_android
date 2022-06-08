@@ -46,6 +46,17 @@ public class Category {
         categories.add(new Category("https://cdn.pixabay.com/photo/2015/01/30/18/13/diet-617756_960_720.jpg", "다이어트"));
         categories.add(new Category("https://cdn.pixabay.com/photo/2020/03/21/11/17/burger-4953465_960_720.jpg", "간편식"));
         categories.add(new Category("https://cdn.pixabay.com/photo/2018/06/04/13/36/cold-noodles-3453218_960_720.jpg", "계절요리"));
+        categories.add(new Category("https://cdn.pixabay.com/photo/2018/06/04/13/36/cold-noodles-3453218_960_720.jpg", "계절요리"));
+        categories.add(new Category("https://cdn.pixabay.com/photo/2018/06/04/13/36/cold-noodles-3453218_960_720.jpg", "계절요리"));
+        categories.add(new Category("https://cdn.pixabay.com/photo/2018/06/04/13/36/cold-noodles-3453218_960_720.jpg", "계절요리"));
+        categories.add(new Category("https://cdn.pixabay.com/photo/2018/06/04/13/36/cold-noodles-3453218_960_720.jpg", "계절요리"));
+        categories.add(new Category("https://cdn.pixabay.com/photo/2018/06/04/13/36/cold-noodles-3453218_960_720.jpg", "계절요리"));
+        categories.add(new Category("https://cdn.pixabay.com/photo/2018/06/04/13/36/cold-noodles-3453218_960_720.jpg", "계절요리"));
+        categories.add(new Category("https://cdn.pixabay.com/photo/2018/06/04/13/36/cold-noodles-3453218_960_720.jpg", "계절요리"));
+        categories.add(new Category("https://cdn.pixabay.com/photo/2018/06/04/13/36/cold-noodles-3453218_960_720.jpg", "계절요리"));
+        categories.add(new Category("https://cdn.pixabay.com/photo/2018/06/04/13/36/cold-noodles-3453218_960_720.jpg", "계절요리"));
+        categories.add(new Category("https://cdn.pixabay.com/photo/2018/06/04/13/36/cold-noodles-3453218_960_720.jpg", "계절요리"));
+        categories.add(new Category("https://cdn.pixabay.com/photo/2018/06/04/13/36/cold-noodles-3453218_960_720.jpg", "계절요리"));
         return categories;
     }
 }
