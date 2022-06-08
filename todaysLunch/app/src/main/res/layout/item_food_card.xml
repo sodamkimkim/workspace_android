@@ -19,25 +19,28 @@
             android:backgroundTint="#f76e11"
             android:elevation="10dp"
             app:cardCornerRadius="10dp">
-            
+
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
                 <ImageView
-                    android:src="@drawable/coldnoodle"
+                    android:id="@+id/categoryImageView"
                     android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:scaleType="centerCrop"
-                    android:layout_height="match_parent"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:textColor="#ffffff"
-                    android:text="메뉴/카테"
-                    android:textStyle="bold"
-                    android:textSize="30dp"
-                    android:fontFamily="@font/baeminjooa"
+                    android:src="@drawable/coldnoodle" />
 
-                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:id="@+id/titleTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/baemindohyun"
+                    android:layout_gravity="center"
+                    android:text="메뉴/카테"
+                    android:textColor="#ffffff"
+                    android:textSize="25dp"
+                    android:textStyle="bold" />
             </FrameLayout>
         </androidx.cardview.widget.CardView>
     </RelativeLayout>
