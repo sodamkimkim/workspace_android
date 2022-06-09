@@ -44,12 +44,12 @@ public class Fragment2 extends Fragment implements View.OnClickListener {
                              Bundle savedInstanceState) {
 
 
-        FoodAdapter foodAdapter = new FoodAdapter(Food.getFoodData(), getActivity(), new OnFoodItemClickListener() {
-            @Override
-            public void onItemClicked(View view, int position) {
-
-            }
-        });
+//        FoodAdapter foodAdapter = new FoodAdapter(Food.getFoodData(), getActivity(), new OnFoodItemClickListener() {
+//            @Override
+//            public void onItemClicked(View view, int position) {
+//
+//            }
+//        });
 
         ViewGroup rootview = (ViewGroup) inflater.inflate(R.layout.fragment_2, container, false);
 
