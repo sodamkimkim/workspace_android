@@ -19,20 +19,48 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/randomLayout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:background="#ff9f45">
 
-            <TextView
-                android:id="@+id/Fragment1TextView1"
+
+            <FrameLayout
+                android:layout_margin="10dp"
+                android:background="@drawable/random"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:fontFamily="@font/baemindohyun"
-                android:text="today's lunch 랜덤추천메뉴는   연어덮밥  입니다."
-                android:textSize="20dp"
-                app:layout_constraintBottom_toTopOf="@id/recyclerView1"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@+id/recyclerView1"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <ImageView
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/rulet"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"/>
+
+
+                <TextView
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+                    android:id="@+id/Fragment1TextView1"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:text="오늘 점심 뭐 먹지?"
+                    android:fontFamily="@font/baeminyeonsung"
+                    android:textSize="30dp"
+                    android:layout_marginRight="50dp"
+                    android:gravity="end|center_vertical"
+                    app:layout_constraintBottom_toTopOf="@id/recyclerView1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </FrameLayout>
+
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recyclerView1"
@@ -42,8 +70,9 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/Fragment1TextView1" />
+                app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
+
 
     </androidx.core.widget.NestedScrollView>
 
